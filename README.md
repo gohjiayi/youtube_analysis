@@ -3,6 +3,26 @@
 The main aim of this project is to test the hypothesis: “Having a positive sentiment title and humans in thumbnails are the 
 most important factors in increasing YouTube engagement.” 
 
+## Project Directory Structure
+```
+├── thumbnail
+│   ├── image_1.jpg
+│   ├── image_2.jpg
+│   ├── ...
+├── data
+│   ├── socialblade_df.csv
+│   ├── channel_df.csv
+│   ├── videos_df.csv (to be downloaded)
+│   ├── agg_videos_df.csv
+├── score_data
+│   ├── amazon_score.csv
+│   ├── ...
+├── aggregate_video.ipnyb
+├── extract_channel.ipnyb
+.   .
+.   .
+```
+
 ## Data Collection
 By the end of this section, you should have obtained 3 different files containing information of the YouTube channels of interest.
 
@@ -24,4 +44,4 @@ in `data/agg_videos_df.csv`.
 ## Sentiment Analysis
 
 ## Object Detection
-To save all thumbnail images under the `thumbnail` folder by executing the `?` script.
+To save all thumbnail images under the `thumbnail/` folder by executing the `?` script.
