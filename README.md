@@ -53,6 +53,18 @@ Run `aggregate_video.ipnyb` to obtain aggregated metrics for all videos listed i
 
 ## Data Exploration
 Run `data_exploration.ipnyb` to see visualisations generated from the data collected.
+Visualisations includes:
+- Video Views Distribution by Category
+- Video Count Distribution by Category
+- Subscriber Count Distribution by Category
+- Correlation Matrix of Comment Count, Like Count, Dislike Count, View Count, Days Published and Title Length
+- Distribution of Videos Published by Hour
+- Distribution of Videos by Day of Week
+- Top 10 Most Watched Videos
+- Top 10 Most Liked Videos
+- Top 10 Most Disliked Videos
+- Top 10 Most Commented Videos
+- Distribution of Most Popular Words in Truncated Titles 
 
 ## Data Collection using Machine Learning Algorithms 
 
