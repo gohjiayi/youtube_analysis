@@ -1,47 +1,85 @@
 # Going Big (Data) on YouTube
 
 The main aim of this project is to test the hypothesis: “Having a positive sentiment title and humans in thumbnails are the 
-most important factors in increasing YouTube engagement.” 
+most important factors in increasing YouTube engagement.” (TBD)
 
 ## Project Directory Structure
 ```
-├── thumbnail
-│   ├── image_1.jpg
-│   ├── image_2.jpg
-│   ├── ...
 ├── data
 │   ├── socialblade_df.csv
 │   ├── channel_df.csv
-│   ├── videos_df.csv (to be downloaded)
+│   ├── videos_df.csv
 │   ├── agg_videos_df.csv
-├── score_data
-│   ├── amazon_score.csv
+│   ├── sentiment_analysis_df.csv
+│   ├── parse_tree_df.csv
+│   ├── object_detection_df.csv
+├── images
+│   ├── thumbnail1.jpg
+│   ├── thumbnail2.jpg
 │   ├── ...
-├── aggregate_video.ipnyb
+├── models
+│   ├── model1.h5
 ├── extract_channel.ipnyb
+├── aggregate_video.ipnyb
+├── data_exploration.ipnyb
+├── sentiment_analysis.ipnyb
+├── parse_tree.ipnyb
+├── object_detection.ipnyb
+├── models.ipnyb
 .   .
 .   .
 ```
 
 ## Data Collection
-By the end of this section, you should have obtained 3 different files containing information of the YouTube channels of interest.
+To skip the data collection step, you may simply download all collected data from our Google Drive folder linked here (insert link).
+
+In this section, we will be extracting information of YouTube channels of interest.
 
 ### YouTube Channels selected
-The list of channel selected is saved as `socialblade_df.csv`. This list can be edited to suit your objectives.
+The list of 160 channels the team have selected by hand is saved in `data/socialblade_df.csv` which includes 3 columns: channel's name, channel 
+id and category.
 
 ### Channel Data
-For all channels listed in `socialblade_df`, we have then collected their channel information by executing `extract_channel.ipnyb`
-and the output is saved under `data/channel_df.csv`.
+Run `extract_channel.ipnyb` to collect channel information for channels listed in `data/socialblade_df.csv`. The output is saved as 
+`data/channel_df.csv`.
 
 ### Video Data
-For all channels listed in `socialblade_df`, we have also collected all their video information by running the `?` file. As the
-file size is rather big, we'll be hosting it in a google drive link for download.
+Run `XXXX.ipnyb` to extract all video information of channels listed in `data/socialblade_df.csv`. As YouTube API as a limit, we are only able to
+retrieve the latest 20k videos from each channel. We have also chosen to retrieve videos published from 2015 onwards. The output is saved as 
+`data/videos_df.csv`.
 
 ### Aggregated Video Data
-For all videos listed in `videos_df`, `aggregate_video.ipnyb` is executed to obtain aggregated values which are then stored
-in `data/agg_videos_df.csv`.
+Run `aggregate_video.ipnyb` to obtain aggregated metrics for all videos listed in `data/videos_df.csv`. The output is saved as `data/agg_videos_df.csv`.
 
-## Sentiment Analysis
+## Data Exploration
+Run `data_exploration.ipnyb` to see visualisations generated from the data collected.
+Visualisations includes:
+- Video Views Distribution by Category
+- Video Count Distribution by Category
+- Subscriber Count Distribution by Category
+- Correlation Matrix of Comment Count, Like Count, Dislike Count, View Count, Days Published and Title Length
+- Distribution of Videos Published by Hour
+- Distribution of Videos by Day of Week
+- Top 10 Most Watched Videos
+- Top 10 Most Liked Videos
+- Top 10 Most Disliked Videos
+- Top 10 Most Commented Videos
+- Distribution of Most Popular Words in Truncated Titles 
 
-## Object Detection
-To save all thumbnail images under the `thumbnail/` folder by executing the `?` script.
+## Data Collection using Machine Learning Algorithms 
+
+### Sentiment Analysis
+Run `sentiment_analysis.ipnyb` for all videos listed in `data/videos_df.csv`. The output is saved as `data/sentiment_analysis_df.csv`.
+
+### Parse Tree
+Run `parse_tree.ipnyb` for all videos listed in `data/videos_df.csv`. The output is saved as `data/parse_tree_df.csv`.
+
+### Object Detection
+Run `object_detection.ipnyb` to save all thumbnail images of videos in `data/videos_df.csv` into the `images/` folder (~2GB). Then, object
+detection is executed for all thumbnail images downloaded. The output is saved as `data/object_detection_df.csv`.
+
+## Feature Selection
+(TBD)
+
+## Model Building and Evaluation
+Run `models.ipnyb` which will save our selected model to the `models/` folder. (TBD)
