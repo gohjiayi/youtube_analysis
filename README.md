@@ -13,11 +13,9 @@ most important factors in increasing YouTube engagement.”
 │   ├── sentiment_analysis_df.csv
 │   ├── parse_tree_df.csv
 │   ├── object_detection_df.csv
-│   ├── features_df.csv
+│   └── features_df.csv
 ├── images
-│   ├── thumbnail1.jpg
-│   ├── thumbnail2.jpg
-│   ├── ...
+│   └── ...
 ├── models
 │   └── object_detection
 │       ├── coco.names
@@ -68,7 +66,7 @@ Run `sentiment_analysis.ipnyb` for all videos listed in `data/videos_df.csv`. Th
 Run `parse_tree.ipnyb` for all videos listed in `data/videos_df.csv`. The output is saved as `data/parse_tree_df.csv`.
 
 ### Object Detection
-Run `object_detection.ipnyb` to save all thumbnail images of videos in `data/videos_df.csv` into the `images/` folder (~2GB). Then, object detection is executed for all thumbnail images downloaded. The output is saved as `data/object_detection_df.csv`. Alternatively, code for performing this step on Amazon Web Service (AWS) S3 and SageMaker has been provided to facilitate efficiency.
+Run `object_detection.ipnyb` to save all thumbnail images of videos in `data/videos_df.csv` into the `images/` folder. Then, object detection is executed for all thumbnail images downloaded. The output is saved as `data/object_detection_df.csv`. Alternatively, code for performing this step on Amazon Web Service (AWS) S3 and SageMaker has been provided to facilitate efficiency.
 
 ## Data Exploration
 Run `data_exploration.ipnyb` to see visualisations generated from the data collected.
