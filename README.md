@@ -1,7 +1,13 @@
 # Going Big (Data) on YouTube
 
-The main aim of this project is to test the hypothesis: “Having a positive sentiment title and humans in thumbnails are the 
-most important factors in increasing YouTube engagement.”
+The main aim of this project is to test the following hypotheses.
+- A) “A positive sentiment title in a YouTube video will affect views”
+- B) “Having humans in the thumbnail of a YouTube video will affect views”
+
+## Links
+1. Report
+2. Presentation Deck
+3. [Files Used](https://drive.google.com/drive/folders/1BGLeZOULr42pAgc6zqhshybP3YxXhFLA?usp=sharing)
 
 ## Project Directory Structure
 ```
@@ -37,9 +43,7 @@ most important factors in increasing YouTube engagement.”
 ```
 
 ## Data Collection
-To skip the data collection step, you may simply download all collected data from our Google Drive folder linked [here](https://drive.google.com/drive/folders/1BGLeZOULr42pAgc6zqhshybP3YxXhFLA?usp=sharing).
-
-In this section, we will be extracting information of YouTube channels of interest.
+In this section, we will be extracting information of YouTube channels of interest. All data used in this project can be downloaded from Link (3) under the Links section above.
 
 ### YouTube Channels selected
 The list of 160 channels the team have selected by hand is saved in `data/socialblade_df.csv` which includes 3 columns: channel's name, channel 
@@ -51,7 +55,7 @@ Run `extract_channel.ipnyb` to collect channel information for channels listed i
 
 ### Video Data
 Run `???.ipnyb` to extract all video information of channels listed in `data/socialblade_df.csv`. As YouTube API as a limit, we are only able to
-retrieve the latest 20k videos from each channel. We have also chosen to retrieve videos published from 2015 onwards. The output is saved as 
+retrieve the latest 20,000 videos from each channel. We have also chosen to retrieve videos published from 2015 onwards. The output is saved as 
 `data/videos_df.csv`.
 
 ### Aggregated Video Data
@@ -62,26 +66,14 @@ Run `aggregate_video.ipnyb` to obtain aggregated metrics for all videos listed i
 ### Sentiment Analysis
 Run `sentiment_analysis.ipnyb` for all videos listed in `data/videos_df.csv`. The output is saved as `data/sentiment_analysis_df.csv`.
 
-### Parse Tree
-Run `parse_tree.ipnyb` for all videos listed in `data/videos_df.csv`. The output is saved as `data/parse_tree_df.csv`.
+### Part-of-Speech (PoS) Tagging
+Run `pos_tagging.ipnyb` for all videos listed in `data/videos_df.csv`. The output is saved as `data/parse_tree_df.csv`.
 
 ### Object Detection
 Run `object_detection.ipnyb` to save all thumbnail images of videos in `data/videos_df.csv` into the `images/` folder. Then, object detection is executed for all thumbnail images downloaded. The output is saved as `data/object_detection_df.csv`. Alternatively, code for performing this step on Amazon Web Service (AWS) S3 and SageMaker has been provided to facilitate efficiency.
 
 ## Data Exploration
 Run `data_exploration.ipnyb` to see visualisations generated from the data collected.
-Visualisations includes:
-- Video Views Distribution by Category
-- Video Count Distribution by Category
-- Subscriber Count Distribution by Category
-- Correlation Matrix of Comment Count, Like Count, Dislike Count, View Count, Days Published and Title Length
-- Distribution of Videos Published by Hour
-- Distribution of Videos by Day of Week
-- Top 10 Most Watched Videos
-- Top 10 Most Liked Videos
-- Top 10 Most Disliked Videos
-- Top 10 Most Commented Videos
-- Distribution of Most Popular Words in Truncated Titles
 
 ## Feature Selection
 Run `feature_selection.ipnyb` to select features used for model building in the next stage, the finalised files are saved as `data/features_df.csv`.
@@ -89,9 +81,9 @@ Run `feature_selection.ipnyb` to select features used for model building in the 
 ## Model Building and Evaluation
 For all 4 models built, they were split into different files as `model_[model name].ipnyb`. Run the respective files to build the models and the results can be seen in the table below.
 
-Model | RMSE | MAE | 
---- | --- | --- 
-Polynomial Regression | 0.00 | 0.00
-Random Forest | 0.00 | 0.00
-Gradient Boosting | 0.00 | 0.00 
-Artificial Neural Network | 0.00 | 0.00 
+Model | RMSE | MSE | MAE
+--- | --- | --- | ---
+Polynomial Regression | 24,486,700 | 599,598,500,178,391 | 2,410,707
+Random Forest | 29,491,373 | 869,741,069,564,456 | 2,369,201
+Gradient Boosting | 29,839,713 | 890,408,446,899,621 | 2,363,009
+Artificial Neural Network | 20,330,611 | 413,333,730,000,000 | 2,338,276
