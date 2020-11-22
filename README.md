@@ -15,7 +15,6 @@ B) “Having humans in the thumbnail of a YouTube video will affect views”
 │   ├── socialblade_df.csv
 │   ├── channel_df.csv
 │   ├── videos_df.csv
-│   ├── agg_videos_df.csv
 │   ├── sentiment_analysis_df.csv
 │   ├── pos_tagging_df.csv
 │   ├── object_detection_df.csv
@@ -28,7 +27,6 @@ B) “Having humans in the thumbnail of a YouTube video will affect views”
 │       ├── yolov3.cfg
 │       └── yolov3.weights
 ├── extract_channel.ipnyb
-├── aggregate_video.ipnyb
 ├── sentiment_analysis.ipnyb
 ├── pos_tagging.ipnyb
 ├── object_detection.ipnyb
