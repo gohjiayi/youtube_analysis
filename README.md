@@ -1,8 +1,8 @@
 # Going Big (Data) on YouTube
 
 The main aim of this project is to test the following hypotheses.
-- A) “A positive sentiment title in a YouTube video will affect views”
-- B) “Having humans in the thumbnail of a YouTube video will affect views”
+A) “A positive sentiment title in a YouTube video will affect views”
+B) “Having humans in the thumbnail of a YouTube video will affect views”
 
 ## Links
 1. Report
@@ -17,7 +17,7 @@ The main aim of this project is to test the following hypotheses.
 │   ├── videos_df.csv
 │   ├── agg_videos_df.csv
 │   ├── sentiment_analysis_df.csv
-│   ├── parse_tree_df.csv
+│   ├── pos_tagging_df.csv
 │   ├── object_detection_df.csv
 │   └── features_df.csv
 ├── images
@@ -30,33 +30,26 @@ The main aim of this project is to test the following hypotheses.
 ├── extract_channel.ipnyb
 ├── aggregate_video.ipnyb
 ├── sentiment_analysis.ipnyb
-├── parse_tree.ipnyb
+├── pos_tagging.ipnyb
 ├── object_detection.ipnyb
 ├── data_exploration.ipnyb
 ├── feature_selection.ipnyb
 ├── model_polynomial_regression.ipnyb
 ├── model_random_forest.ipnyb
 ├── model_gradient_boosting.ipnyb
-└── model_neural_network.ipnyb
-.   .
-.   .
+└── model_neural_networks.ipnyb
 ```
 
 ## Data Collection
 In this section, we will be extracting information of YouTube channels of interest. All data used in this project can be downloaded from Link (3) under the Links section above.
 
 ### YouTube Channels selected
-The list of 160 channels the team have selected by hand is saved in `data/socialblade_df.csv` which includes 3 columns: channel's name, channel 
-id and category.
+The list of 160 channels the team have selected by hand is saved in `data/socialblade_df.csv` which includes 3 columns: channel's name, channel id and category.
 
-### Channel Data
-Run `extract_channel.ipnyb` to collect channel information for channels listed in `data/socialblade_df.csv`. The output is saved as 
-`data/channel_df.csv`.
+### Channel and Video Data
+Run `extract_channel.ipnyb` to collect channel and video information for channels listed in `data/socialblade_df.csv`. The output is saved as `data/channel_df.csv` and `data/videos_df.csv`.
 
-### Video Data
-Run `???.ipnyb` to extract all video information of channels listed in `data/socialblade_df.csv`. As YouTube API as a limit, we are only able to
-retrieve the latest 20,000 videos from each channel. We have also chosen to retrieve videos published from 2015 onwards. The output is saved as 
-`data/videos_df.csv`.
+As YouTube API as a limit, we are only able to retrieve the latest 20,000 videos from each channel. We have also chosen to retrieve videos published from 2015 onwards.
 
 ### Aggregated Video Data
 Run `aggregate_video.ipnyb` to obtain aggregated metrics for all videos listed in `data/videos_df.csv`. The output is saved as `data/agg_videos_df.csv`.
