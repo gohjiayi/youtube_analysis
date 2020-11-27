@@ -77,4 +77,4 @@ Model | RMSE | MSE | MAE
 Polynomial Regression | 24,486,700 | 599,598,500,178,391 | 2,410,707
 Random Forest | 29,491,373 | 869,741,069,564,456 | 2,369,201
 Gradient Boosting | 29,839,713 | 890,408,446,899,621 | 2,363,009
-Artificial Neural Network | 20,330,611 | 413,333,730,000,000 | 2,338,276
+**Artificial Neural Network | 20,330,611 | 413,333,730,000,000 | 2,338,276**
