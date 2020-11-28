@@ -58,7 +58,7 @@ Run `aggregate_video.ipnyb` to obtain aggregated metrics for all videos listed i
 Run `sentiment_analysis.ipnyb` for all videos listed in `data/videos_df.csv`. The output is saved as `data/sentiment_analysis_df.csv`.
 
 ### Part-of-Speech (PoS) Tagging
-Run `pos_tagging.ipnyb` for all videos listed in `data/videos_df.csv`. The output is saved as `data/parse_tree_df.csv`.
+Run `pos_tagging.ipnyb` for all videos listed in `data/videos_df.csv`. The output is saved as `data/pos_tagging_df.csv`.
 
 ### Object Detection
 Run `object_detection.ipnyb` to save all thumbnail images of videos in `data/videos_df.csv` into the `images/` folder. Then, object detection is executed for all thumbnail images downloaded. The output is saved as `data/object_detection_df.csv`. Alternatively, code for performing this step on Amazon Web Service (AWS) S3 and SageMaker has been provided to facilitate efficiency.
