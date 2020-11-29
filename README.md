@@ -1,12 +1,12 @@
 # Going Big (Data) on YouTube
 
-The main aim of this project is to test the following hypotheses.
-A) “A positive sentiment title in a YouTube video will affect views”
-B) “Having humans in the thumbnail of a YouTube video will affect views”
+The main aim of this project is to test the following hypotheses. <br>
+A. “A positive sentiment title in a YouTube video will affect views” <br>
+B. “Having humans in the thumbnail of a YouTube video will affect views”
 
 ## Links
-1. Report
-2. Presentation Deck
+1. [Report](https://drive.google.com/file/d/1-WZgLGmtj8yZLXgQRGSgHIJ0QZjTMqzD/view?usp=sharing)
+2. [Presentation Slides](https://drive.google.com/file/d/1Ek9DPWIk8zs0lSnMeWrSBAP6BIHOHfuT/view?usp=sharing)
 3. [Files Used](https://drive.google.com/drive/folders/1BGLeZOULr42pAgc6zqhshybP3YxXhFLA?usp=sharing)
 
 ## Project Directory Structure
